@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        div .section1 .wrapper{
+            width: 530px;
+            height: auto;
+            margin-left: 100px;
+            margin-top: 180px;
+            
+        }
+        div .section1{
+            width: 100%;
+            height: 900px;
+            background: url(https://www.riotgames.com/darkroom/2000/7d49afea7019b456e2efba6bf79f661f:fa464c93bb6cf442654982e9453df88c/w22-riot-home.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+        }
+        div .section1 .logo{
+            margin: auto;
+            width:80%;
+            height: 230px;
+            background: url(https://www.riotgames.com/darkroom/500/f75130ec95398332c14c2788f635a41b:cd906c0efd4997a088c38bdcdd788609/w22-logo.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin-bottom: 50px;
+        }
+        div .section1 .button{
+            width: 280px;
+            height: 70px;
+            box-shadow: 0 10px 45px -10px rgb(11 196 226 / 15%), 0 0 20px -10px rgb(11 196 226 / 35%), 0 10px 30px -10px rgb(11 196 226 / 25%);
+            background: linear-gradient(315deg,#0bc4e2 0,#2c8cc2 100%);
+            border-radius: 24px;
+            position: absolute;
+            left: 200px;
+            top: 600px;
+            display: flex;
+            color:white;
+            line-height: 65px;
+            font-weight: 700;
+            font-size: 30px;
+            margin-top: 50px;
+
+        }
+        div .section1 .circle{
+            width: 50px;
+            height: 50px;
+            margin: 10px 10px;
+            background: black;
+            border-radius: 50%;
+            position: relative;
+            
+        }
+
+        div .section1 svg{
+            float: left;
+            flex-direction: column;
+            align-content: center;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            left: 10px;
+            top: 10px;
+        }
+        div .section1 h1{
+            font-size: 28px;
+            color: white;
+            text-align: center;
+        }
+        div .section1 p{
+            color: gray;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        div .section2{
+            width:100%;
+            height: 800px;
+            background: linear-gradient(to left , black 60%, rgba(5, 127, 131, 0.699) 130%);
+            overflow: hidden;
+        }
+        div .section2 .happening{
+            margin: 100px 100px;
+        }
+        div .section2 .happening .title{
+            overflow: hidden;
+        }
+        div .section2 .happening h2{
+            color: white;
+            font-size: 40px;
+            float: left;
+        }
+        div .section2 .happening button{
+            float: right;
+            margin-top: 45px;
+            background: rgba(128,128,128,.2);
+            border-radius: 5px;
+            width: 80px;
+            height: 30px;
+            color: white;
+            font-weight: 700;
+        }
+        div .section2 .happening .wrapper{
+            background: red;
+            width: 100%;
+            height: 300px;
+        }
+        div .section2 .happening .main{
+            background: yellow;
+            width: 50%;
+            margin: 5px;
+            height: 100%;
+            float: left;
+        }
+        div .section2 .happening ul{
+            margin: 0;
+            background: blue;
+            width: 40%;
+            height: 100%;
+            float: left;
+        }
+        div .section3{
+            width: 100%;
+            height: 800px;
+            background: rgba(20, 18, 18, 0.945);
+        }
+        div .section4{
+            display: flex;
+            width: 100%;
+            height: 400px;
+        }
+        div .section4 .section4_description{
+            width: 45%;
+            background: #ebebeb;
+        }
+        div .section4 .section4_picture{
+            width: 55%;
+            background: url('../img/img.PNG');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        footer{
+            width: 100%;
+            height: 300px;
+            background: rgba(20, 18, 18, 0.945);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <section class="section1">
+            <div class="wrapper">
+                <div class="logo"></div>
+                <h1>소환사의 컵을 차지하기 위한 결전이 지금 시작됩니다.</h1>
+                <p>LoLEsports.com에서 단 한순간도 놓치지 말고 지켜보세요.</p>
+                <div class="button">
+                    <div class="circle">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15.003 14H3.5v-4h11.502l-4.165-4.538 2.705-2.947 7.353 8.012c.747.813.747 2.133 0 2.947l-7.353 8.011-2.705-2.947L15.003 14z" fill="#F0F0F0"></path>
+                        </svg>
+                    </div>지금 시청하기
+                </div>
+            </div>
+        </section>
+
+        <section class="section2">
+            <div class=happening>
+                <div class="title">
+                    <h2>소식</h2>
+                    <button>모두 보기</button>
+                </div>
+                <div class="wrapper">
+                    <div class="main">
+
+                    </div>
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section3">
+
+        </section>
+
+        <section class="section4">
+            <div class="section4_description">
+
+            </div>
+            <div class="section4_picture">
+
+            </div>
+        </section>
+
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
