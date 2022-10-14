@@ -5,7 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
+        header{
+            display: flex;
+            width: 100%;
+            height: 70px;
+            line-height: 70px;
+            position: fixed;
+            background: rgba(20, 18, 18, 0);
+        }
+        header .logo{
+            /* background: rgba(0, 0, 0, 0.918); */
+            flex:1;
+            display: flex;
+        }
+        header .logo .logo1{
+            background: url('../img/logo1.PNG');
+            background-size: contain;
+            background-repeat: no-repeat;
+            flex:2;
+            margin-top: 20px;
+            margin-left: 25px;
+            margin-bottom: 10px;
+        }
+
+        header .logo .logo2{
+            background: url('../img/logo2.PNG');
+            background-size: contain;
+            background-repeat: no-repeat;
+            flex:1;
+            margin: 10px;
+            margin-top: 18px;
+            margin-bottom: 15px;
+        }
+        header .menu{
+            /* background: black; */
+            flex:6;
+            display: flex;
+            color: white;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        header .menu div{
+            display: flex;
+            margin-right: 20px;
+        }
+        header .menu div>div{
+            font-size: 1px;
+            margin-left: 4px;
+            color: #656462;
+        }
+        header .else{
+            /* background: black; */
+            flex:1.7;
+            display: flex;
+        }
+        header .else .earth{
+            margin-top: 3px;
+            margin-right: 30px;
+        }
+        header .else .search{
+            padding: 5px;
+            padding-left: 15px;
+            width: 150px;
+            height: 30%;
+            margin-top: 20px;
+            display: flex;
+            border-radius: 20px;
+            background: #2b2a29;
+        }
+        header .else .search input{
+            height: 20px;
+            background: #2b2a29;
+            border: 0px solid #000;
+            font-weight: 700;
+            width: 120px;
+        }
+        header .else .search svg{
+            width: 18px;
+        }
+        header .else .login{
+            height: 30px;
+            width: 80px;
+            margin-top: 20px;
+            border-radius: 20px;
+            background: rgb(209, 54, 57);
+            margin-left: 10px;
+            line-height: 30px;
+            font-weight: 700;
+            text-align: center;
+            font-size: 14px;
+        }
         body{
             margin: 0;
         }
@@ -48,7 +139,10 @@
             font-weight: 700;
             font-size: 30px;
             margin-top: 50px;
-
+        }
+        div .section1 .button:hover{
+            box-shadow: 10px 20px 30px -10px rgb(11 196 226 / 15%), -10px 20px 30px -10px rgb(11 196 226 / 35%), 10px 20px 50px -10px rgb(11 196 226 / 25%);
+            background: linear-gradient(315deg,#05d9fae8 50%,#1692da 100%);
         }
         div .section1 .circle{
             width: 50px;
@@ -120,6 +214,12 @@
             flex:6;
             border-radius: 10px;
         }
+        div .section2 .happening .main:hover{
+            border: 2px solid rgba(241, 236, 236, .7);
+            margin-left: -2px;
+            margin-top: -2px;
+            margin-right: -2px;
+        }
         div .section2 .happening ul{
             margin: 0;
             /* background: blue; */
@@ -138,6 +238,13 @@
             background: rgba(128, 128, 128, 0.267);
             border-radius: 10px;
             overflow: hidden;
+        }
+        div .section2 .happening ul li:hover{
+            border: 2px solid rgba(241, 236, 236, .7);
+            margin-left: -2px;
+            margin-top: -2px;
+            margin-bottom: -2px;
+            background: rgba(128, 128, 128, 0.473);
         }
         div .section2 .happening ul li div:first-child{
             width: 30%;
@@ -201,62 +308,108 @@
             background: white;
             height: 400px;
             margin-bottom: 50px;
-            border-radius: 10px;
-            
+            border-radius: 10px;  
+        }
+        div .section3 .wrapper ul .li1:hover{
+            border: 2px solid rgba(241, 236, 236, .7);
+            margin-left: -2px;
+            margin-top: -2px;
         }
         div .section3 .wrapper ul .li2{
             width: 32.5%;
             background: red;
-            height: 280px;
+            height: 250px;
             margin-bottom: 50px;
             border-radius: 10px;
             background-size: cover;
             background-repeat: no-repeat;
+        }
+        div .section3 .wrapper ul .li2:hover{
+            border: 2px solid rgba(241, 236, 236, .7);
+            margin-left: -2px;
+            margin-top: -2px;
         }
         div .section3 .wrapper ul li:nth-child(1){
             background: url('../img/li1.PNG');
             background-size: cover;
             background-repeat: no-repeat;
         }
+        div .section3 .wrapper ul li:nth-child(1):hover{
+            margin-bottom: -2px;
+        }
         div .section3 .wrapper ul li:nth-child(2){
             background: url('../img/li2.PNG');
             background-size: cover;
             background-repeat: no-repeat;
+        }
+        div .section3 .wrapper ul li:nth-child(2):hover{
+            margin-bottom: -2px;
+            margin-right: -2px;
         }
         div .section3 .wrapper ul li:nth-child(3){
             background: url('../img/li3.PNG');
             background-size: cover;
             background-repeat: no-repeat;
         }
+        div .section3 .wrapper ul li:nth-child(3):hover{
+            margin-bottom: -2px;
+            margin-right: -2px;
+        }
         div .section3 .wrapper ul li:nth-child(4){
             background: url('../img/li4.PNG');
             background-size: cover;
             background-repeat: no-repeat;
+        }
+        div .section3 .wrapper ul li:nth-child(4):hover{
+            margin: 2px;
+            margin-top: -2px;
         }
         div .section3 .wrapper ul li:nth-child(5){
             background: url('../img/li5.PNG');
             background-size: cover;
             background-repeat: no-repeat;
         }
+        div .section3 .wrapper ul li:nth-child(5):hover{
+            margin-bottom: -2px;
+            margin-right: -2px;
+        }
         div .section3 .wrapper ul li:nth-child(6){
             background: url('../img/li6.PNG');
             background-size: cover;
             background-repeat: no-repeat;
+        }
+        div .section3 .wrapper ul li:nth-child(6):hover{
+            margin-bottom: -2px;
+            margin-right: -2px;
         }
         div .section3 .wrapper ul li:nth-child(7){
             background: url('../img/li7.PNG');
             background-size: cover;
             background-repeat: no-repeat;
         }
+        div .section3 .wrapper ul li:nth-child(7):hover{
+            margin: 2px;
+            margin-top: -2px;
+        }
         div .section3 .wrapper ul li:nth-child(8){
             background: url('../img/li8.PNG');
             background-size: cover;
             background-repeat: no-repeat;
         }
+        div .section3 .wrapper ul li:nth-child(8):hover{
+            margin-bottom: -2px;
+            margin-right: -2px;
+        }
         div .section3 .wrapper ul li:nth-child(9){
             background: url('../img/li9.PNG');
             background-size: cover;
             background-repeat: no-repeat;
+        }
+        div .section3 .wrapper ul li:nth-child(9).last:hover{
+            border: 2px solid rgba(241, 236, 236, .7);
+            margin:auto;
+            margin-top: -2px;
+            margin-bottom: -2px;
         }
         div .section3 .wrapper ul .last{
             margin: auto;
@@ -300,6 +453,9 @@
             height: 135px;
             background:rgba(173,172,170,.2);
         }
+        div .section4 .section4_description .wrapper div:hover{
+            background: rgba(173, 172, 170, 0.658);
+        }
         div .section4 .section4_description .wrapper .number{
             text-align: center;
             font-weight: 700;
@@ -319,14 +475,17 @@
             font-size: 21px;
             border-radius: 20px;
             margin: 0px;
-            margin-left: 80px;
+            margin-left: 180px;
             margin-top: 40px;
             background: #d1363a;
-            width: 60%;
+            width: 35%;
             height: 40px;
             line-height: 40px;
             padding: 10px;
             color: #ebebeb;
+        }
+        div .section4 .section4_description .wrapper div:last-child:hover{
+            opacity: 0.8;
         }
         div .section4 .section4_picture{
             width: 55%;
@@ -341,7 +500,28 @@
         }
     </style>
 </head>
-<body>
+<body onscroll="effect()">
+    <header>
+        <div class="logo">
+            <div class="logo1"></div>
+            <div class="logo2"></div>
+        </div>
+        <div class="menu">
+            <div class="menu1">라이엇 소개 <div>▼</div></div>
+            <div class="menu2">라이엇에서 일하기 <div>▼</div></div>
+            <div class="menu3">소식</div>
+        </div>
+        <div class="else">
+            <div class="earth">
+                <svg width="14" height="14" class="" viewBox="0 0 16 16"><title>globeIcon</title><path d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0113.536 4.8zM8 1.632A11.27 11.27 0 019.528 4.8H6.472A11.27 11.27 0 018 1.632zM1.808 9.6A6.594 6.594 0 011.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 004.4 8c0 .544.048 1.072.112 1.6H1.808zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 012.464 11.2zm2.36-6.4h-2.36a6.39 6.39 0 013.464-2.848A12.52 12.52 0 004.824 4.8zM8 14.368A11.27 11.27 0 016.472 11.2h3.056A11.27 11.27 0 018 14.368zM9.872 9.6H6.128A11.77 11.77 0 016 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6zm.2 4.448a12.52 12.52 0 001.104-2.848h2.36a6.424 6.424 0 01-3.464 2.848zM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704z" fill="#E8E8E8"></path></svg>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="결과">
+                <svg viewBox="0 0 19 40"><path fill-rule="evenodd" fill="white" clip-rule="evenodd" d="M19 18.6l-5.2-5.2C15.2 12 16 10.1 16 8c0-4.4-3.6-8-8-8S0 3.6 0 8s3.6 8 8 8c1.6 0 3.1-.5 4.3-1.3l5.3 5.3 1.4-1.4zM2 8c0-3.3 2.7-6 6-6 1.6 0 3.1.6 4.2 1.8C13.4 4.9 14 6.4 14 8s-.6 3.1-1.8 4.2C11.1 13.4 9.6 14 8 14c-3.3 0-6-2.7-6-6z"></path></svg>
+            </div>
+            <div class="login">로그인</div>
+        </div>
+    </header>
     <div class="main">
         <section class="section1">
             <div class="wrapper">
@@ -444,5 +624,16 @@
 
         </footer>
     </div>
+    <script>
+        // function effect(){
+        //     document.querySelector('header').style.background='black';
+        //     var check = $(window).scrollTop;
+        //     console.log(check);
+        //     if(check==0){
+        //         alert('ddd');
+        //         document.querySelector('header').style.background='rgba(20, 18, 18, 0)';
+        //     };
+        // }
+    </script>
 </body>
 </html>
